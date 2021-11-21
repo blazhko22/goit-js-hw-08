@@ -1,13 +1,13 @@
 // Add imports above this line
 import { galleryItems } from './gallery-items';
 // Change code below this line
-import "simplelightbox/dist/simple-lightbox.min.css";
+
 // console.log(galleryItems);
 
-const galleryContainer = document.querySelector(".gallery");
+const galleryContainer = document.querySelector('.gallery');
 const imagesMarkup = makeImageCard(galleryItems);
 
-galleryContainer.insertAdjacentHTML("beforeend", imagesMarkup);
+galleryContainer.insertAdjacentHTML('beforeend', imagesMarkup);
 
 function makeImageCard(imgs) {
   return imgs
@@ -17,18 +17,18 @@ function makeImageCard(imgs) {
 </a>
 `;
     })
-    .join("");
+    .join('');
 }
 
-galleryContainer.addEventListener("click", ongalleryContainerClick);
+galleryContainer.addEventListener('click', ongalleryContainerClick);
 
 function ongalleryContainerClick(evt) {
   evt.preventDefault();
-  if (evt.target.nodeName !== "IMG") {
+  if (evt.target.nodeName !== 'IMG') {
     return;
   }
 }
-let lightbox = new SimpleLightbox(".gallery__item", {
-  captionsData: "alt",
+let lightbox = new SimpleLightbox('.gallery__item', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
