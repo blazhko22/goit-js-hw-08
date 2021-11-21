@@ -3,7 +3,9 @@ import { galleryItems } from './gallery-items';
 // Change code below this line
 
 // console.log(galleryItems);
-const SimpleLightbox = require('simplelightbox');
+// import SimpleLightbox from 'simplelightbox';
+// import 'simplelightbox/dist/simple-lightbox.min.css';
+
 const galleryContainer = document.querySelector('.gallery');
 const imagesMarkup = makeImageCard(galleryItems);
 
@@ -32,6 +34,3 @@ let lightbox = new SimpleLightbox('.gallery__item', {
   captionsData: 'alt',
   captionDelay: 250,
 });
-
-// import SimpleLightbox from 'simplelightbox';
-// import 'simplelightbox/dist/simple-lightbox.min.css';
