@@ -27,4 +27,8 @@ function formInput() {
 
 function updateOutput() {
   const saveText = localStorage.getItem(LOCALSTORAGE_KEY);
+  if (saveText) {
+    inputLink.value = JSON.parse(saveText).value;
+    textareaLink.value = JSON.parse(saveText).text;
+  }
 }
