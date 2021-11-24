@@ -7,6 +7,7 @@ const textareaLink = document.querySelector('textarea');
 const LOCALSTORAGE_KEY = 'feedback-form-state';
 updateOutput();
 
+form.addEventListener('input', throttle(formInput, 500));
 form.addEventListener('submit', saveMessage);
 
 function saveMessage(evt) {
@@ -15,8 +16,6 @@ function saveMessage(evt) {
   evt.currentTarget.reset();
   localStorage.removeItem(LOCALSTORAGE_KEY);
 }
-
-form.addEventListener('input', throttle(formInput, 500));
 
 function formInput() {
   localStorage.setItem(
