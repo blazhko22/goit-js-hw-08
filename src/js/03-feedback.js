@@ -27,7 +27,7 @@ function formInput() {
 function updateOutput() {
   const saveText = localStorage.getItem(LOCALSTORAGE_KEY);
   if (saveText) {
-    inputLink.value = JSON.parse(saveText).value;
+    inputLink.value = JSON.parse(saveText).email;
     textareaLink.value = JSON.parse(saveText).text;
   }
 }
